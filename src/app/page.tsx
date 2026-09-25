@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '@/components/Nav'
 import Banner from '@/components/Banner'
 import Footer from '@/components/Footer'
+import Card from '@/components/Card'
 
 
 const page = () => {
@@ -10,6 +11,7 @@ const page = () => {
 
     <Nav /> 
     <Banner />
+    <Card />
     
 
     <Footer />

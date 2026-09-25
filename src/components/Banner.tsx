@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="flex justify-around bg-[#222630] container mx-auto mt-10">
             <div>
                 <p className="text-[#C2F800] mt-14 ">WORKOUT LIBRARY</p>
-                <p className="text-[#FFFFFF] font-bold text-7xl mt-5">TRAIN WITH INTENT. LOG<br />
+                <p className="text-[#FFFFFF] font-bold text-7xl mt-2">TRAIN WITH INTENT. LOG<br />
                      EVERY SET.</p>
                 <p className="text-[#9CA3AF] mt-5">FitLog is a dark, no-nonsense gym companion: pick a lift, lock it<br />
                      into today&apos;s plan, and watch the week&apos;s work add up.</p>

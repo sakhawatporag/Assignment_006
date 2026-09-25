@@ -25,12 +25,14 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1 flex justify-between items-center gap-4">
           <button 
       className="px-6 py-2.5 rounded-full bg-[#1b2207] text-[#cbfb00] font-semibold text-base transition-colors hover:brightness-125 focus:outline-none">Workouts</button>
-          <button className="text-[#9CA3AF]">my plan</button>
+          <button className="text-[#9CA3AF] hover:text-white transition-colors duration-200">My Plan</button>
         </ul>
       </div>
-      <div className="navbar-end gap-4">
-        <button>plan</button>
-        <button>saved</button>
+      <div className="navbar-end gap-2">
+
+        
+        <button className="flex items-center gap-3 bg-[#0d0f12] text-white hover:text-[#9CA3AF] px-4 py-2 rounded-full font-medium text-lg transition-colors">Plan <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#ccff00] text-black font-bold text-sm">0</span></button>
+        <button className="ml-1 flex items-center gap-3 bg-[#0d0f12] text-[#9CA3AF] hover:text-white px-4 py-2 rounded-full font-medium text-lg transition-colors">saved <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#2D313B] text-[#D1D5DB] font-bold text-sm">0</span></button>
       </div>
     </div>
   );
