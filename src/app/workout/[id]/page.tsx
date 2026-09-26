@@ -51,12 +51,12 @@ export default async function WorkoutDetailPage({
   const badges = workout.tags || workout.muscleGroups || ['Chest', 'Arms'];
 
   return (
-    <div className="min-h-screen bg-[#070b12] text-white flex items-center justify-center p-4 sm:p-8">
-      <div className="max-w-5xl w-full bg-[#0d1421] border border-gray-800 rounded-3xl p-6 sm:p-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div className="min-h-screen bg-[#070b12] p-3 text-white sm:p-6 lg:p-8">
+      <div className="mx-auto w-full max-w-5xl rounded-3xl border border-gray-800 bg-[#0d1421] p-4 sm:p-8 lg:p-10">
+        <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:gap-8">
           
           {/* Left: Workout Image */}
-          <div className="relative w-full h-100 md:h-full min-h-105 rounded-2xl overflow-hidden bg-gray-900">
+          <div className="relative h-72 w-full overflow-hidden rounded-2xl bg-gray-900 sm:h-96 md:h-[520px]">
             <Image
               src={workout.image || workout.thumbnail || '/placeholder.png'}
               alt={workout.name || workout.title || 'Workout Image'}
@@ -69,7 +69,7 @@ export default async function WorkoutDetailPage({
           {/* Right: Info and Specs */}
           <div className="flex flex-col gap-5">
             <div>
-              <h1 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-wide text-white">
+              <h1 className="text-2xl font-extrabold uppercase tracking-wide text-white sm:text-4xl">
                 {workout.name || workout.title || 'Barbell Bench Press'}
               </h1>
               <p className="text-gray-400 text-sm mt-2 leading-relaxed">
@@ -91,7 +91,7 @@ export default async function WorkoutDetailPage({
             </div>
 
             {/* Specifications Box mapped */}
-            <div className="bg-[#121c2c] rounded-2xl px-5 py-2 border border-gray-800/80 divide-y divide-gray-800/70">
+            <div className="divide-y divide-gray-800/70 rounded-2xl border border-gray-800/80 bg-[#121c2c] px-3 py-2 sm:px-5">
               {specs.map((spec, idx) => (
                 <div key={idx} className="flex justify-between py-2.5 text-xs sm:text-sm">
                   <span className="text-gray-400 font-medium tracking-wider">{spec.label}</span>

@@ -25,7 +25,7 @@ const Card = async () => {
 
   return (
     <section className="container mx-auto px-4 py-12">
-      <p className="text-5xl font-bold text-[#FFFFFF]">THE LIBRARY</p>
+      <p className="text-3xl font-bold text-[#FFFFFF] sm:text-5xl">THE LIBRARY</p>
       <p className="text-[#9CA3AF] mt-4">Twelve lifts covering every major muscle group.</p>
 
       {/* Grid container */}
@@ -37,7 +37,7 @@ const Card = async () => {
             className="group bg-[#111827] border border-gray-800 rounded-2xl overflow-hidden hover:border-lime-400 transition flex flex-col"
           >
             {/* Thumbnail */}
-            <div className="relative w-full h-52 bg-gray-900">
+            <div className="relative h-48 w-full bg-gray-900 sm:h-52">
               <Image
                 src={card.image || card.thumbnail || '/placeholder.png'}
                 alt={card.name}
@@ -47,9 +47,9 @@ const Card = async () => {
             </div>
 
             {/* Content */}
-            <div className="p-6 flex flex-col flex-1 justify-between">
+            <div className="flex flex-1 flex-col justify-between p-4 sm:p-6">
               <div>
-                <h3 className="text-xl font-bold text-white uppercase group-hover:text-lime-400 transition">
+                <h3 className="text-lg font-bold uppercase text-white transition group-hover:text-lime-400 sm:text-xl">
                   {card.name}
                 </h3>
                 <p className="text-sm text-gray-400 mt-1">{card.equipment || 'Standard Equipment'}</p>

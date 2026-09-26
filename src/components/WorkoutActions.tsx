@@ -28,7 +28,7 @@ const WorkoutActions = ({ workout }: { workout: WorkoutDetail }) => {
   };
 
   return (
-    <div className="flex items-center gap-3 pt-2">
+    <div className="flex flex-col items-stretch gap-3 pt-2 sm:flex-row sm:items-center">
       <button
         onClick={() => toggleItem(cardItems, setCardItems, isInPlan, "Removed from your plan", "Added to your plan")}
         className="flex-1 flex items-center justify-center gap-2 bg-[#ccff00] hover:bg-[#b8e600] text-black font-bold py-3 px-4 rounded-xl text-xs sm:text-sm transition"
