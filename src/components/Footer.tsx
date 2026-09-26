@@ -9,7 +9,7 @@ const Footer = () => {
             <p>FITLOG</p>
             </div>
             <div>
-                <p className="text-[#6B7280] mr-8" >© 2026 FitLog — Workout Library. Train hard, log honest.</p>
+                <p className="text-[#6B7280] mr-9" >©  2026 FitLog — Workout Library. Train hard, log honest.</p>
             </div>
 
         </div>

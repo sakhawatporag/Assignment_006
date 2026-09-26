@@ -47,7 +47,7 @@ const Card = async () => {
             </div>
 
             {/* Content */}
-            <div className="p-5 flex flex-col flex-1 justify-between">
+            <div className="p-6 flex flex-col flex-1 justify-between">
               <div>
                 <h3 className="text-xl font-bold text-white uppercase group-hover:text-lime-400 transition">
                   {card.name}
