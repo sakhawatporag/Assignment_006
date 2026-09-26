@@ -1,8 +1,14 @@
-import React from 'react';
+"use client";
+
+import React, { useContext } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '../asset/logo.png'
+import { CardContext } from '@/context/Cardprovider';
 
 const Nav = () => {
+  const { cardItems, wishlist } = useContext(CardContext);
+
   return (
     <div className="navbar shadow-sm container mx-auto bg-[#0C0D10] flex justify-around items-center">
       <div className="navbar-start">
@@ -20,16 +26,15 @@ const Nav = () => {
       </div></div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex justify-between items-center gap-4">
-          <button 
-      className="px-6 py-2.5 rounded-full bg-[#1b2207] text-[#cbfb00] font-semibold text-base transition-colors hover:brightness-125 focus:outline-none">Workouts</button>
-          <button className="text-[#9CA3AF] hover:text-white transition-colors duration-200">My Plan</button>
+            <Link href="/" className="px-6 py-2.5 rounded-full bg-[#1b2207] text-[#cbfb00] font-semibold text-base transition-colors hover:brightness-125 focus:outline-none">Workouts</Link>
+            <Link href="/plan" className="text-[#9CA3AF] hover:text-white transition-colors duration-200">My Plan</Link>
         </ul>
       </div>
       <div className="navbar-end gap-2">
 
         
-        <button className="flex items-center gap-3 bg-[#0d0f12] text-white hover:text-[#9CA3AF] px-4 py-2 rounded-full font-medium text-lg transition-colors">Plan <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#ccff00] text-black font-bold text-sm">0</span></button>
-        <button className="ml-1 flex items-center gap-3 bg-[#0d0f12] text-[#9CA3AF] hover:text-white px-4 py-2 rounded-full font-medium text-lg transition-colors">saved <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#2D313B] text-[#D1D5DB] font-bold text-sm">0</span></button>
+        <Link href="/plan" className="flex items-center gap-3 bg-[#0d0f12] text-white hover:text-[#9CA3AF] px-4 py-2 rounded-full font-medium text-lg transition-colors">Plan <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#ccff00] text-black font-bold text-sm">{cardItems.length}</span></Link>
+        <Link href="/saved" className="ml-1 flex items-center gap-3 bg-[#0d0f12] text-[#9CA3AF] hover:text-white px-4 py-2 rounded-full font-medium text-lg transition-colors">Saved <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#2D313B] text-[#D1D5DB] font-bold text-sm">{wishlist.length}</span></Link>
       </div>
     </div>
   );
