@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import WorkoutActions from '@/components/WorkoutActions';
+import BackButton from '@/components/BackButton';
 
 import type { CardItem } from '@/context/Cardprovider';
 
@@ -52,11 +53,13 @@ export default async function WorkoutDetailPage({
 
   return (
     <div className="min-h-screen bg-[#070b12] p-3 text-white sm:p-6 lg:p-8">
-      <div className="mx-auto w-full max-w-5xl rounded-3xl border border-gray-800 bg-[#0d1421] p-4 sm:p-8 lg:p-10">
+      <div className="mx-auto w-full max-w-5xl">
+        <BackButton />
+        <div className="rounded-3xl border border-gray-800 bg-[#0d1421] p-4 sm:p-8 lg:p-10">
         <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:gap-8">
           
           {/* Left: Workout Image */}
-          <div className="relative h-72 w-full overflow-hidden rounded-2xl bg-gray-900 sm:h-96 md:h-[520px]">
+          <div className="relative h-72 w-full overflow-hidden rounded-2xl bg-gray-900 sm:h-96 md:h-130">
             <Image
               src={workout.image || workout.thumbnail || '/placeholder.png'}
               alt={workout.name || workout.title || 'Workout Image'}
@@ -118,6 +121,7 @@ export default async function WorkoutDetailPage({
             <WorkoutActions workout={workout} />
 
           </div>
+        </div>
         </div>
       </div>
     </div>
