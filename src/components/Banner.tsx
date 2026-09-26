@@ -13,7 +13,7 @@ const Banner = () => {
                      into today&apos;s plan, and watch the week&apos;s work add up.</p>
                 <button className="mt-5 mb-14 rounded-xl bg-[#ccff00] px-7 py-3 text-sm font-extrabold uppercase tracking-wide text-black transition-all hover:brightness-95 active:scale-95">BROWSE WORKOUTS</button>
             </div>
-            <div className="mt-14 mb-14">
+            <div className="mt-15 mb-14">
                 <Image src={banner} alt="" />
             </div>
         </div>

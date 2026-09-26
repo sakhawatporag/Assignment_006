@@ -105,7 +105,7 @@ export default async function WorkoutDetailPage({
               <h2 className="text-xs font-bold uppercase tracking-widest text-gray-300 mb-2">
                 INSTRUCTIONS
               </h2>
-              <ol className="space-y-1.5 text-xs sm:text-sm text-gray-400">
+              <ol className="space-y-2 text-xs sm:text-sm text-gray-400">
                 {workout.instructions?.map((step, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <span className="text-gray-500">{idx + 1}.</span>
